@@ -16,9 +16,16 @@
 
 
 # Accepting lengths of the three sides of a triangle from user
-side1 = float(input("Enter the first side of the triangle: "))
-side2 = float(input("Enter the second side of the triangle: "))
-side3 = float(input("Enter the third side of the triangle: "))
+while True:
+    try:
+        side1 = float(input("Enter the first side of the triangle: "))
+        side2 = float(input("Enter the second side of the triangle: "))
+        side3 = float(input("Enter the third side of the triangle: "))
+    except:
+        print('INPUT ERROR: only numeric data are accepted here.')
+        print('Please enter all the data again.')
+    else:
+        break
 
 # Calculate the area and print it out if it is a valid triangle
 import math
